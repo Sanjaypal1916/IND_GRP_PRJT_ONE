@@ -1,0 +1,18 @@
+artifacts_root: artifacts
+
+data_ingestion:
+  root_dir : artifacts/data_ingestion
+  source_url: https://github.com/krishnaik06/datasets/raw/refs/heads/main/winequality-data.zip
+  local_data_dir: artifacts/data_ingestion/data.zip
+  unzip_data_dir: artifacts/data_ingestion
+
+data_validation:
+  root_dir: artifacts/data_validation
+  unzip_data_dir: artifacts/data_ingestion/winequality-red.csv
+  status_file: artifacts/data_validation/status.txt
+
+data_transformation:
+  root_dir: artifacts/data_transformation
+  train_data_dir: artifacts/data_transformation/train.csv
+  test_data_dir: artifacts/data_transformation/test.csv
+  unzip_data_dir : artifacts/data_ingestion/winequality-red.csv
